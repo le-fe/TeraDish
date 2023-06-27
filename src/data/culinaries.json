@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Pork",
+    "icon": "/culinary/pork.png",
+    "code": "pork"
+  },
+  {
+    "name": "Beef",
+    "icon": "/culinary/beef.png",
+    "code": "beef"
+  },
+  {
+    "name": "Chicken",
+    "icon": "/culinary/chicken.png",
+    "code": "chicken"
+  },
+  {
+    "name": "Fish",
+    "icon": "/culinary/fish.png",
+    "code": "fish"
+  },
+  {
+    "name": "Eggs",
+    "icon": "/culinary/eggs.png",
+    "code": "eggs"
+  },
+  {
+    "name": "Shrimp",
+    "icon": "/culinary/shrimp.png",
+    "code": "shrimp"
+  },
+  {
+    "name": "Vegetables",
+    "icon": "/culinary/vegetables.png",
+    "code": "vegetables"
+  },
+  {
+    "name": "Noodles",
+    "icon": "/culinary/noodles.png",
+    "code": "noodles"
+  },
+  {
+    "name": "Tofu",
+    "icon": "/culinary/tofu.png",
+    "code": "tofu"
+  }
+]

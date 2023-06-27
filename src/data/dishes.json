@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tomyum",
+    "name": "Tom Yum",
+    "desc": "Hot and sour Thai soup",
+    "img": "/dishes/tomyum.png",
+    "country_code": "TH",
+    "culinaries": [
+      "shrimp"
+    ],
+    "intro": "Tom yum or tom yam is a popular family of hot and sour Thai soups.[4] The name 'tom yam' is composed of two Thai words. Tom refers to the boiling process, while yam means 'mixed'."
+  },
+  {
+    "id": "padthai",
+    "name": "Pad Thai",
+    "desc": "Stir-fried rice noodle",
+    "img": "/dishes/padthai.png",
+    "country_code": "TH",
+    "culinaries": [
+      "eggs",
+      "noodles"
+    ],
+    "intro": "Pad thai, phat thai, or phad thai, is a stir-fried rice noodle dish commonly served as a street food in Thailand as part of the country's cuisine. It is typically made with rice noodles, shrimp, peanuts, a scrambled egg, and bean sprouts. The ingredients are fried in a wok."
+  },
+  {
+    "id": "bundaumamtom",
+    "name": "Bún Đậu Mắm Tôm",
+    "desc": "Fried tofu, spring rolls, boiled pork, and vegetables",
+    "img": "/dishes/bundaumamtom.png",
+    "country_code": "VN",
+    "culinaries": [
+      "pork",
+      "vegetables",
+      "tofu"
+    ],
+    "intro": "Bún đậu mắm tôm a noodle dish from Northern Vietnam consisting of rice vermicelli, fried tofu and fermented shrimp paste topped with a variety of ingredients such as spring rolls, boiled pork, sausages, and fresh herbs and vegetables"
+  },
+  {
+    "id": "pho",
+    "name": "Phở",
+    "desc": "Broth, rice noodles, herbs, and meat",
+    "img": "/dishes/pho.png",
+    "country_code": "VN",
+    "culinaries": [
+      "beef",
+      "noodles"
+    ],
+    "intro": "Phở is a popular food in Vietnam where it is served in households, street-stalls, and restaurants country-wide. Residents o the city of Nam Định were the first to create Vietnamese traditional phở. It is considered Vietnam's national dish."
+  }
+]

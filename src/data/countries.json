@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Vietnam",
+    "flag": "/countries/VN.png",
+    "code": "VN"
+  },
+  {
+    "name": "Thailand",
+    "flag": "/countries/TH.png",
+    "code": "TH"
+  },
+  {
+    "name": "China",
+    "flag": "/countries/CN.png",
+    "code": "CN"
+  },
+  {
+    "name": "Singapore",
+    "flag": "/countries/SG.png",
+    "code": "SG"
+  },
+  {
+    "name": "Italia",
+    "flag": "/countries/IT.png",
+    "code": "IT"
+  },
+  {
+    "name": "India",
+    "flag": "/countries/IN.png",
+    "code": "IN"
+  },
+  {
+    "name": "Japan",
+    "flag": "/countries/JP.png",
+    "code": "JP"
+  },
+  {
+    "name": "Korea",
+    "flag": "/countries/KR.png",
+    "code": "KR"
+  },
+  {
+    "name": "Turkey",
+    "flag": "/countries/TR.png",
+    "code": "TR"
+  }
+]
