@@ -15,7 +15,7 @@ function setCategory(culinary) {
 </script>
 
 <template>
-  <swiper slides-per-view="auto">
+  <swiper slides-per-view="auto" class="select-none">
     <swiper-slide
       v-for="{ name, icon, code } in CULINARIES"
       :key="name"

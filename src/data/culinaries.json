@@ -9,7 +9,7 @@
     "name": "Pork",
     "icon": "/culinary/pork.png",
     "code": "pork",
-    "desc": "Pork is the most popular meat in the Western world, particularly in Central Europe. It is also very popular in East and Southeast Asia (Mainland Southeast Asia, Philippines, Singapore, and East Timor). The meat is highly prized in Asian cuisines, especially in China (including Hong Kong), for its fat content and texture."
+    "desc": "Pork is meat of the pig"
   },
   {
     "name": "Beef",
@@ -64,6 +64,12 @@
     "icon": "/culinary/bread.png",
     "code": "bread",
     "desc": "Bread is a staple food prepared from a dough of flour (usually wheat) and water, usually by baking."
+  },
+  {
+    "name": "Rice",
+    "icon": "/culinary/rice.png",
+    "code": "rice",
+    "desc": "Rice (Oryza sativa) is a type of cereal and food"
   },
   {
     "name": "Tofu",

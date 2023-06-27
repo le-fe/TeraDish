@@ -4,7 +4,9 @@
     :class="{ 'Header--hidden': routeName !== 'Home' }"
   >
     <Logo class="transition ease-in-out duration-300" />
-    <span class="text-xs text-gray-700">{{ `Explore Traditional Food` }}</span>
+    <span class="text-xs text-gray-700">
+      {{ `Traditional Cuisine Dictionary` }}
+    </span>
   </header>
 </template>
 

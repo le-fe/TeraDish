@@ -77,16 +77,6 @@ const dishList = computed(() => {
           key="result"
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 pl-5 pr-5"
         >
-          <!-- <transition-group
-            name="card"
-            enter-active-class="transform-gpu"
-            enter-class="opacity-0 -translate-x-full"
-            enter-to-class="opacity-100 translate-x-0"
-            leave-active-class="absolute transform-gpu"
-            leave-class="opacity-100 translate-x-0"
-            leave-to-class="opacity-0 -translate-x-full"
-            @before-leave="beforeLeave"
-          > -->
           <div
             v-for="dish in dishList"
             :key="dish.id"

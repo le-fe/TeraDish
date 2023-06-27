@@ -17,7 +17,7 @@ function setActiveCountry(country?: ICountry) {
 }
 </script>
 <template>
-  <swiper slides-per-view="auto" :space-between="12">
+  <swiper slides-per-view="auto" :space-between="12" class="select-none">
     <swiper-slide
       v-for="country in COUNTRIES"
       :key="country.code"

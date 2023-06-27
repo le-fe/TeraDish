@@ -80,5 +80,52 @@
       "bread"
     ],
     "intro": "Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as various types of sausage, anchovies, mushrooms, onions, olives, vegetables, meat, ham, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven."
+  },
+  {
+    "id": "tandoori",
+    "name": "Tandoori",
+    "desc": "Marinated Chicken spices and roasted in a tandoor, a cylindrical clay oven",
+    "img": "/dishes/tandoori.png",
+    "country_code": "IN",
+    "culinaries": [
+      "chicken"
+    ],
+    "intro": "Tandoori chicken is a South Asian dish of chicken marinated in yogurt and spices and roasted in a tandoor, a cylindrical clay oven. The dish is now popular world-wide. The modern form of the dish was popularized by the Moti Mahal restaurant in New Delhi in the late 1940s."
+  },
+  {
+    "id": "sushi",
+    "name": "Sushi",
+    "desc": "Rolls of vinegar-flavored cold cooked rice with raw fish, vegetables, or egg.",
+    "img": "/dishes/sushi.png",
+    "country_code": "JP",
+    "culinaries": [
+      "rice",
+      "shrimp",
+      "eggs"
+    ],
+    "intro": "Sushi (すし, 寿司, 鮨, 鮓, pronounced [sɯɕiꜜ] or [sɯꜜɕi]) is a Japanese dish of prepared vinegared rice (鮨飯, sushi-meshi), usually with some sugar and salt, accompanied by a variety of ingredients (ねた, neta), such as seafood—often raw—and vegetables. Styles of sushi and its presentation vary widely, but the one key ingredient is 'sushi rice', also referred to as shari (しゃり), or sumeshi (酢飯)"
+  },
+  {
+    "id": "kimchi",
+    "name": "Kimchi",
+    "desc": "Salted and fermented vegetables",
+    "img": "/dishes/kimchi.png",
+    "country_code": "KR",
+    "culinaries": [
+      "vegetables"
+    ],
+    "intro": "Kimchi is a traditional Korean banchan consisting of salted and fermented vegetables, most commonly using napa cabbage or Korean radish."
+  },
+  {
+    "id": "doner-kebab",
+    "name": "Doner kebab",
+    "desc": "Meat cooked on a vertical rotisserie",
+    "img": "/dishes/doner-kebab.png",
+    "country_code": "TR",
+    "culinaries": [
+      "bread",
+      "pork"
+    ],
+    "intro": "Doner kebab is a type of kebab, made of meat cooked on a vertical rotisserie."
   }
 ]
