@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         pacifico: ["Pacifico", "Arial", "sans-serif"],
+        poppins: ["Poppins", "Arial", "sans-serif"],
       },
     },
   },

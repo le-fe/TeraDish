@@ -12,8 +12,15 @@ const mappingCulinaries = CULINARIES.reduce((obj, c) => {
   return obj;
 }, {});
 
-export function fetchDishes() {
-  return DISHES.map((dish) => ({
+export function fetchDishes(country_code?: string, culinary_code?: string) {
+  let results = DISHES;
+  if (country_code) {
+    results = results.filter((d) => d.country_code === country_code);
+  }
+  if (culinary_code) {
+    results = results.filter((d) => d.culinaries.includes(culinary_code));
+  }
+  return results.map((dish) => ({
     ...dish,
     country: mappingCountries[dish.country_code],
     culinary_list: dish.culinaries.map((code) => mappingCulinaries[code]),

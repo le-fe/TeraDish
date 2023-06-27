@@ -1,6 +1,6 @@
 [
   {
-    "id": "tomyum",
+    "id": "tom-yum",
     "name": "Tom Yum",
     "desc": "Hot and sour Thai soup",
     "img": "/dishes/tomyum.png",
@@ -11,7 +11,7 @@
     "intro": "Tom yum or tom yam is a popular family of hot and sour Thai soups.[4] The name 'tom yam' is composed of two Thai words. Tom refers to the boiling process, while yam means 'mixed'."
   },
   {
-    "id": "padthai",
+    "id": "pad-thai",
     "name": "Pad Thai",
     "desc": "Stir-fried rice noodle",
     "img": "/dishes/padthai.png",
@@ -23,7 +23,7 @@
     "intro": "Pad thai, phat thai, or phad thai, is a stir-fried rice noodle dish commonly served as a street food in Thailand as part of the country's cuisine. It is typically made with rice noodles, shrimp, peanuts, a scrambled egg, and bean sprouts. The ingredients are fried in a wok."
   },
   {
-    "id": "bundaumamtom",
+    "id": "bun-dau-mam-tom",
     "name": "Bún Đậu Mắm Tôm",
     "desc": "Fried tofu, spring rolls, boiled pork, and vegetables",
     "img": "/dishes/bundaumamtom.png",
@@ -36,6 +36,18 @@
     "intro": "Bún đậu mắm tôm a noodle dish from Northern Vietnam consisting of rice vermicelli, fried tofu and fermented shrimp paste topped with a variety of ingredients such as spring rolls, boiled pork, sausages, and fresh herbs and vegetables"
   },
   {
+    "id": "dimsum",
+    "name": "Dimsum",
+    "desc": "Meats wrapped and steamed, deep-fried, or pan-fried.",
+    "img": "/dishes/dimsum.png",
+    "country_code": "CN",
+    "culinaries": [
+      "pork",
+      "vegetables"
+    ],
+    "intro": "Dimsum is a large range of small Cantonese dishes that are traditionally enjoyed in restaurants for brunch. Most modern dim sum dishes are commonly associated with Cantonese cuisine, although dim sum dishes also exist in other Chinese cuisines."
+  },
+  {
     "id": "pho",
     "name": "Phở",
     "desc": "Broth, rice noodles, herbs, and meat",
@@ -46,5 +58,27 @@
       "noodles"
     ],
     "intro": "Phở is a popular food in Vietnam where it is served in households, street-stalls, and restaurants country-wide. Residents o the city of Nam Định were the first to create Vietnamese traditional phở. It is considered Vietnam's national dish."
+  },
+  {
+    "id": "chilli-crab",
+    "name": "Chilli Crab",
+    "desc": "Mud crabs deep-fried in a sweet, savoury and spicy gravy",
+    "img": "/dishes/chilli-crab.png",
+    "country_code": "SG",
+    "culinaries": [
+      "crab"
+    ],
+    "intro": "Chilli crab is a Southeast Asian seafood dish that is widely associated with the cuisines of both Malaysia and Singapore. The widely known version of chili crab today could be traced back to the 1950s in Malaysia and Singapore. Mud crabs are commonly used and are stir-fried in a semi-thick, sweet and savoury tomato-and-chilli-based sauce."
+  },
+  {
+    "id": "pizza",
+    "name": "Pizza",
+    "desc": "Flat base of leavened wheat-based dough topped with tomatoes, cheese, and meat, shrimp",
+    "img": "/dishes/pizza.png",
+    "country_code": "IT",
+    "culinaries": [
+      "bread"
+    ],
+    "intro": "Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as various types of sausage, anchovies, mushrooms, onions, olives, vegetables, meat, ham, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven."
   }
 ]

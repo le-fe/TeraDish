@@ -1,14 +1,14 @@
 <template>
   <div
-    class="Loader fixed left-0 right-0 top-0 h-full flex items-center justify-center z-50"
-    :class="{ 'Loader--hidden': !visible }"
+    class="app-loader fixed left-0 right-0 top-0 h-full flex items-center justify-center z-50"
+    :class="{ 'app-loader--hidden': !visible }"
   >
     <img
-      class="Loader__rings absolute w-14 transform-gpu"
-      src="@/assets/images/rings.svg"
+      class="app-loader__rings absolute w-14 transform-gpu"
+      :src="ringIcon"
       alt="Loading"
     />
-    <svg class="Loader__background h-full w-full" viewBox="0 0 300 300">
+    <svg class="app-loader__background h-full w-full" viewBox="0 0 300 300">
       <circle
         cx="150"
         cy="151"
@@ -20,19 +20,17 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Loader",
-  props: {
-    visible: {
-      type: Boolean,
-    },
+<script setup lang="ts">
+const ringIcon = new URL("@/assets/images/rings.svg", import.meta.url).href;
+defineProps({
+  visible: {
+    type: Boolean,
   },
-};
+});
 </script>
 
 <style scoped lang="scss">
-.Loader {
+.app-loader {
   &__background circle {
     stroke: $color-primary;
     transition: stroke-width 1.2s $easing-base;
@@ -44,7 +42,7 @@ export default {
   &--hidden {
     @apply pointer-events-none;
 
-    .Loader {
+    .app-loader {
       &__background circle {
         @apply stroke-0;
       }

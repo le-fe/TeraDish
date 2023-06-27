@@ -2,9 +2,12 @@
   <div id="app" class="flex flex-col min-h-screen overflow-x-hidden">
     <Loader :visible="loading" />
     <Header :routeName="routeName" />
-    <transition :name="transition.name" :mode="transition.mode">
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
+    <!-- <router-view v-slot="{ Component }">
+      <transition :name="transition.name" :mode="transition.mode">
+        <component :is="Component" />
+      </transition>
+    </router-view> -->
     <Footer />
   </div>
 </template>
@@ -62,5 +65,23 @@ export default {
   font-family: "Pacifico";
   src: local("Pacifico"),
     url(./assets/fonts/Pacifico/Pacifico-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url(./assets/fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url(./assets/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url(./assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
 }
 </style>

@@ -1,47 +1,62 @@
 [
   {
+    "name": "Worldwide",
+    "flag": "/countries/WW.png",
+    "code": "WW",
+    "desc": "There have been significant improvements and advances during the last century in food preservation, storage, shipping and production, and today many countries, cities and regions have access to their traditional cuisines and many other global cuisines."
+  },
+  {
     "name": "Vietnam",
     "flag": "/countries/VN.png",
-    "code": "VN"
+    "code": "VN",
+    "desc": "Vietnamese cuisine encompasses the foods and beverages of Vietnam. Meals feature a combination of five fundamental tastes: sweet, salty, bitter, sour, and spicy."
   },
   {
     "name": "Thailand",
     "flag": "/countries/TH.png",
-    "code": "TH"
+    "code": "TH",
+    "desc": "Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge."
   },
   {
     "name": "China",
     "flag": "/countries/CN.png",
-    "code": "CN"
+    "code": "CN",
+    "desc": "Chinese food staples such as rice, soy sauce, noodles, tea, chili oil, and tofu, and utensils such as chopsticks and the wok, can now be found worldwide."
   },
   {
     "name": "Singapore",
     "flag": "/countries/SG.png",
-    "code": "SG"
+    "code": "SG",
+    "desc": "Singaporean food can be divided into six types: meat, seafood, rice, noodles, dessert and snacks. Singapore is especially renowned for its seafood. Chilli crab and black pepper crab are two quintessential dishes that dominate the scene and are greatly recommended to tourists."
   },
   {
     "name": "Italia",
     "flag": "/countries/IT.png",
-    "code": "IT"
+    "code": "IT",
+    "desc": "Italian cuisine has a great variety of different ingredients which are commonly used, ranging from fruits, vegetables, grains, cheeses, meats and fish. In northern Italy, fish (such as cod, or baccalà), potatoes, rice, corn (maize), sausages, pork, and different types of cheese are the most common ingredients"
   },
   {
     "name": "India",
     "flag": "/countries/IN.png",
-    "code": "IN"
+    "code": "IN",
+    "desc": "Indian cuisine consists of a variety of regional and traditional cuisines native to India. Given the diversity in soil, climate, culture, ethnic groups, and occupations, these cuisines vary substantially and use locally available spices, herbs, vegetables, and fruits."
   },
   {
     "name": "Japan",
     "flag": "/countries/JP.png",
-    "code": "JP"
+    "code": "JP",
+    "desc": "The traditional cuisine of Japan is based on rice with miso soup and other dishes; there is an emphasis on seasonal ingredients. Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, often grilled, but also served raw as sashimi or in sushi."
   },
   {
     "name": "Korea",
     "flag": "/countries/KR.png",
-    "code": "KR"
+    "code": "KR",
+    "desc": "Korean cuisine is largely based on rice, vegetables, seafood and (at least in South Korea) meats. Dairy is largely absent from the traditional Korean diet."
   },
   {
     "name": "Turkey",
     "flag": "/countries/TR.png",
-    "code": "TR"
+    "code": "TR",
+    "desc": "Turkish cuisine varies across the country. The cooking of Istanbul, Bursa, Izmir, and rest of the Anatolia region inherits many elements of Ottoman court cuisine, including moderate use of spices, a preference for rice over bulgur, koftes, and a wider availability of vegetable stews (türlü), eggplant, stuffed dolmas and fish."
   }
 ]

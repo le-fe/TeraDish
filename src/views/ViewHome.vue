@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
-import { CulinarySlider, DishCard, CountrySlider } from "@/components";
 import { fetchDishes } from "../services/dishes";
 import { getCulinaryDetail } from "../services/culinaries";
+import { getCountryDetail } from "../services/countries";
+import { CulinarySlider, DishCard, CountrySlider } from "@/components";
 
 const route = useRoute();
 
 const activeCountryCode = computed(() => route.query.country);
-const activeCulCode = computed(() => route.query.culinary);
+const activeCulinaryCode = computed(() => route.query.culinary);
+const activeCountry = computed(() =>
+  route.query.country ? getCountryDetail(route.query.country) : null
+);
 const activeCulinary = computed(() =>
   route.query.culinary ? getCulinaryDetail(route.query.culinary) : null
 );
@@ -21,7 +25,11 @@ function beforeLeave(el) {
   el.style.height = height;
 }
 const dishList = computed(() => {
-  return fetchDishes();
+  const country_code =
+    activeCountryCode.value === "WW" ? null : activeCountryCode.value;
+  const culinary_code =
+    activeCulinaryCode.value === "all" ? null : activeCulinaryCode.value;
+  return fetchDishes(country_code, culinary_code);
 });
 </script>
 <template>
@@ -34,15 +42,43 @@ const dishList = computed(() => {
         <CulinarySlider />
       </section>
 
-      <section v-if="activeCulinary">
-        {{ activeCulinary }}
+      <section
+        v-if="activeCountry && activeCountry.code !== 'WW'"
+        class="px-4 my-6"
+      >
+        <div class="p-4 bg-white rounded-xl flex items-start">
+          <div class="mt-2 w-[60px]">
+            <img class="w-full" :src="activeCountry.flag" />
+          </div>
+          <div class="ml-4 flex-1">
+            <span class="text-lg font-semibold">
+              {{ activeCountry.name }}
+            </span>
+            <p class="text-sm">{{ activeCountry.desc }}</p>
+          </div>
+        </div>
+      </section>
+      <section
+        v-if="activeCulinary && activeCulinary.code !== 'all'"
+        class="px-4 my-6"
+      >
+        <div class="p-4 bg-white rounded-xl">
+          <div class="flex items-center">
+            <h3 class="font-semibold text-lg">{{ activeCulinary.name }}</h3>
+            <img class="ml-2 h-[20px]" :src="activeCulinary.icon" />
+          </div>
+          {{ activeCulinary.desc }}
+        </div>
       </section>
 
-      <transition name="slide-top" mode="out-in">
-        <section v-if="dishList.length > 0" key="result">
-          <transition-group
+      <transition name="fade" mode="out-in">
+        <section
+          v-if="dishList.length > 0"
+          key="result"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 pl-5 pr-5"
+        >
+          <!-- <transition-group
             name="card"
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pl-5 pr-5"
             enter-active-class="transform-gpu"
             enter-class="opacity-0 -translate-x-full"
             enter-to-class="opacity-100 translate-x-0"
@@ -50,32 +86,25 @@ const dishList = computed(() => {
             leave-class="opacity-100 translate-x-0"
             leave-to-class="opacity-0 -translate-x-full"
             @before-leave="beforeLeave"
+          > -->
+          <div
+            v-for="dish in dishList"
+            :key="dish.id"
+            class="transition-all duration-300 mt-4"
           >
-            <div
-              v-for="dish in dishList"
-              :key="dish.id"
-              class="transition-all duration-300 mt-4"
+            <router-link
+              :to="{ name: 'dish-detail', params: { dishId: dish.id } }"
+              class="no-underline"
             >
-              <router-link
-                :to="{ name: 'dish-detail', params: { dishId: dish.id } }"
-                class="no-underline"
-              >
-                <DishCard :dish="dish" />
-              </router-link>
-            </div>
-          </transition-group>
+              <DishCard :dish="dish" />
+            </router-link>
+          </div>
         </section>
 
         <section v-else key="nodata">
           <div class="container text-sm text-center px-5 pt-16 pb-16">
-            <img
-              src="@/assets/images/icons/sad.svg"
-              alt="Sad emoji"
-              class="w-20 mx-auto mb-4"
-            />
-            <p class="text-base pb-2">
-              No animals registered for this category yet
-            </p>
+            <img src="/img/sad.png" alt="Sad emoji" class="w-20 mx-auto mb-4" />
+            <p class="text-base pb-2">No dish existed!</p>
             <strong class="text-sm">How about trying later?</strong>
           </div>
         </section>

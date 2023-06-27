@@ -1,9 +1,10 @@
 <template>
   <header
-    class="app-header flex items-center justify-center bg-white absolute top-0 left-0 right-0 z-20 h-20"
+    class="app-header flex flex-col items-center justify-center bg-white fixed top-0 left-0 right-0 z-20 h-20"
     :class="{ 'Header--hidden': routeName !== 'Home' }"
   >
     <Logo class="transition ease-in-out duration-300" />
+    <span class="text-xs text-gray-700">{{ `Explore Traditional Food` }}</span>
   </header>
 </template>
 

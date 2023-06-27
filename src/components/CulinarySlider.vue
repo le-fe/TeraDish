@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, computed } from "vue";
+import { computed } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
 import CULINARIES from "@/data/culinaries.json";
 import { useRoute, useRouter } from "vue-router";
 
@@ -7,34 +8,31 @@ const route = useRoute();
 const router = useRouter();
 const activeCulCode = computed(() => route.query.culinary);
 
-onMounted(() => {
-  const { culinary } = route.query;
-  if (culinary) setCategory(culinary);
-});
-
 function setCategory(culinary) {
-  router.push({ path: "/", query: { culinary } }).catch(() => {});
+  if (!culinary) router.push({ path: "/" });
+  router.push({ path: "/", query: { ...(route.query || {}), culinary } });
 }
 </script>
 
 <template>
-  <swiper-container ref="swiperCategory" slides-per-view="auto" speed="500">
-    <div
-      class="culinary-item inline-flex justify-center items-center flex-col px-4 font-semibold"
-    >
-      {{ `All` }}
-    </div>
+  <swiper slides-per-view="auto">
     <swiper-slide
       v-for="{ name, icon, code } in CULINARIES"
       :key="name"
-      class="w-auto"
+      class="!w-auto cursor-default"
     >
       <div
-        class="culinary-item text-center inline-flex items-center flex-col px-4"
-        @click.native="setCategory(name)"
+        class="culinary-item text-center inline-flex items-center flex-col px-4 cursor-default"
+        @click="setCategory(code)"
       >
-        <div class="mb-1 flex items-center justify-center cursor-pointer">
-          <div :class="code === activeCulCode ? '' : 'grayscale opacity-50'">
+        <div class="mb-1 flex items-center justify-center">
+          <div
+            :class="
+              code === activeCulCode || (code === 'all' && !activeCulCode)
+                ? ''
+                : 'grayscale opacity-50'
+            "
+          >
             <img
               :src="icon"
               :alt="name"
@@ -43,11 +41,15 @@ function setCategory(culinary) {
           </div>
         </div>
         <div
-          class="block cursor-pointer capitalize overflow-dots whitespace-nowrap text-sm"
+          class="block capitalize overflow-dots whitespace-nowrap text-sm"
+          :class="{
+            'font-semibold':
+              code === activeCulCode || (code === 'all' && !activeCulCode),
+          }"
         >
           {{ name }}
         </div>
       </div>
     </swiper-slide>
-  </swiper-container>
+  </swiper>
 </template>
