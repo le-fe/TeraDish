@@ -33,7 +33,7 @@ const dishList = computed(() => {
 });
 </script>
 <template>
-  <main class="Home bg-gray-100">
+  <main class="bg-gray-100">
     <div class="container pt-20 pb-10">
       <section class="px-4 my-4">
         <CountrySlider :activeCode="activeCountryCode" />

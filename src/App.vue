@@ -2,12 +2,7 @@
   <div id="app" class="flex flex-col min-h-screen overflow-x-hidden">
     <Loader :visible="loading" />
     <Header :routeName="routeName" />
-    <router-view></router-view>
-    <!-- <router-view v-slot="{ Component }">
-      <transition :name="transition.name" :mode="transition.mode">
-        <component :is="Component" />
-      </transition>
-    </router-view> -->
+    <router-view />
     <Footer />
   </div>
 </template>

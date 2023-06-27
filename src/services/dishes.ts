@@ -12,6 +12,12 @@ const mappingCulinaries = CULINARIES.reduce((obj, c) => {
   return obj;
 }, {});
 
+const populateDish = (dish) => ({
+  ...dish,
+  country: mappingCountries[dish.country_code],
+  culinary_list: dish.culinaries.map((code) => mappingCulinaries[code]),
+});
+
 export function fetchDishes(country_code?: string, culinary_code?: string) {
   let results = DISHES;
   if (country_code) {
@@ -20,9 +26,10 @@ export function fetchDishes(country_code?: string, culinary_code?: string) {
   if (culinary_code) {
     results = results.filter((d) => d.culinaries.includes(culinary_code));
   }
-  return results.map((dish) => ({
-    ...dish,
-    country: mappingCountries[dish.country_code],
-    culinary_list: dish.culinaries.map((code) => mappingCulinaries[code]),
-  }));
+  return results.map(populateDish);
+}
+
+export function fetchDishDetail(dishId: string) {
+  const dish = DISHES.find((d) => d.id === dishId);
+  return dish ? populateDish(dish) : null;
 }
