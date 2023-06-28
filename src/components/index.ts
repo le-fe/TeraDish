@@ -1,7 +1,8 @@
 export { default as Logo } from "./Logo.vue";
-export { default as Icon } from "./Icon/Icon.vue";
 export { default as Header } from "./Header.vue";
 export { default as Footer } from "./Footer.vue";
+export { default as SearchBar } from "./SearchBar.vue";
+export { default as Icon } from "./Icon/Icon.vue";
 export { default as DishCard } from "./DishCard.vue";
 export { default as CountrySlider } from "./CountrySlider.vue";
 export { default as CulinarySlider } from "./CulinarySlider.vue";

@@ -33,11 +33,13 @@ function setCategory(culinary) {
                 : 'grayscale opacity-50'
             "
           >
-            <img
-              :src="icon"
-              :alt="name"
-              class="-scale-x-1 transform max-h-[60px] max-w-[36px] w-auto"
-            />
+            <div class="w-[36px] h-[36px]">
+              <img
+                :src="icon"
+                :alt="name"
+                class="-scale-x-1 transform w-full h-full"
+              />
+            </div>
           </div>
         </div>
         <div

@@ -12,7 +12,7 @@ const dishDetail = computed(() => fetchDishDetail(dishId));
 <template>
   <div class="container pt-20 pb-10">
     <div class="fixed top-0 z-50 right-0 w-full h-20 bg-white">
-      <div class="flex items-center h-full px-4">
+      <div class="container mx-auto flex items-center h-full px-4">
         <BackButton />
       </div>
     </div>

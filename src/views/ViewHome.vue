@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import { fetchDishes } from "../services/dishes";
 import { getCulinaryDetail } from "../services/culinaries";
 import { getCountryDetail } from "../services/countries";
-import { CulinarySlider, DishCard, CountrySlider } from "@/components";
+import {
+  CulinarySlider,
+  DishCard,
+  CountrySlider,
+  SearchBar,
+} from "@/components";
+import { debounce } from "@/utils/";
 
 const route = useRoute();
 
+const searchValue = ref("");
 const activeCountryCode = computed(() => route.query.country);
 const activeCulinaryCode = computed(() => route.query.culinary);
 const activeCountry = computed(() =>
@@ -17,20 +24,18 @@ const activeCulinary = computed(() =>
   route.query.culinary ? getCulinaryDetail(route.query.culinary) : null
 );
 
-function beforeLeave(el) {
-  const { marginLeft, marginTop, width, height } = window.getComputedStyle(el);
-  el.style.left = `${el.offsetLeft - parseFloat(marginLeft, 10)}px`;
-  el.style.top = `${el.offsetTop - parseFloat(marginTop, 10)}px`;
-  el.style.width = width;
-  el.style.height = height;
-}
 const dishList = computed(() => {
   const country_code =
     activeCountryCode.value === "WW" ? null : activeCountryCode.value;
   const culinary_code =
     activeCulinaryCode.value === "all" ? null : activeCulinaryCode.value;
-  return fetchDishes(country_code, culinary_code);
+  const search_value = searchValue.value || "";
+  return fetchDishes({ country_code, culinary_code, search_value });
 });
+
+const handleSearchInputed = debounce((value) => {
+  searchValue.value = value;
+}, 1000);
 </script>
 <template>
   <main class="bg-gray-100">
@@ -40,6 +45,13 @@ const dishList = computed(() => {
       </section>
       <section class="px-4 mt-8 mb-4">
         <CulinarySlider />
+      </section>
+
+      <section class="px-4 mt-4 mb-2">
+        <SearchBar
+          placeholder="Search a Cuisine"
+          @input="handleSearchInputed"
+        />
       </section>
 
       <section

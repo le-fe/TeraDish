@@ -9,7 +9,7 @@ defineProps({
   >
     <div class="flex w-2/5">
       <div
-        class="w-full rounded-bl-md rounded-tl-md rounded-br-1/2 block h-full bg-red-100 p-4"
+        class="w-full rounded-bl-md rounded-tl-md rounded-br-1/2 block h-full bg-red-100 py-4 px-2"
       >
         <img :src="dish.img" class="" :alt="dish.name" />
       </div>
@@ -28,7 +28,7 @@ defineProps({
         />
         <span class="text-xs ml-1">{{ `${dish.country.name} cuisine` }}</span>
       </div>
-      <div class="block mb-1 text-black leading-tight">
+      <div class="line-clamp-2 text-sm">
         {{ dish.desc }}
       </div>
       <div class="flex flex-wrap mt-4" v-if="dish.culinary_list?.length > 0">
