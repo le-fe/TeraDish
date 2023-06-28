@@ -2,9 +2,9 @@
 
 Traditional Cuisine Dictionary Website
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
 
-![Screenshot](screenshot-2.png)
+![Screenshot](screenshot-2.jpg)
 
 Built with VueJS 3 + Vite + TailwindCSS + Swiper JS
 
