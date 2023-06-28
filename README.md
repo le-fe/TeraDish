@@ -2,6 +2,10 @@
 
 Traditional Cuisine Dictionary Website
 
+![Screenshot](screenshot.png)
+
+![Screenshot](screenshot-2.png)
+
 Built with VueJS 3 + Vite + TailwindCSS + Swiper JS
 
 ## Project setup
