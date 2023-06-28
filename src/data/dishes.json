@@ -127,5 +127,28 @@
       "pork"
     ],
     "intro": "Doner kebab is a type of kebab, made of meat cooked on a vertical rotisserie."
+  },
+  {
+    "id": "wonton",
+    "name": "Wonton",
+    "desc": "Savory dumpling or roll",
+    "img": "/dishes/wonton.png",
+    "country_code": "CN",
+    "culinaries": [
+      "pork",
+      "shrimp"
+    ],
+    "intro": "A wonton (traditional Chinese: 餛飩; simplified Chinese: 馄饨; pinyin: húntun) is a type of Chinese dumpling commonly found across regional styles of Chinese cuisine. It is also spelled wantan or wuntun in transliteration from Cantonese 雲吞 / 云吞 (wan4 tan1) and wenden from Shanghainese 餛飩 / 馄饨 (hhun den). Even though there are many different styles of wonton served throughout China, Cantonese wontons are the most popular in the West due to the predominance of Cantonese restaurants overseas."
+  },
+  {
+    "id": "peking-duck",
+    "name": "Peking duck",
+    "desc": "White-feathered breed of duck",
+    "img": "/dishes/peking-duck.png",
+    "country_code": "CN",
+    "culinaries": [
+      "duck"
+    ],
+    "intro": "Peking duck is a dish from Beijing (Peking) that has been prepared since the Imperial era. The meat is characterized by its thin, crispy skin, with authentic versions of the dish serving mostly the skin and little meat, sliced in front of the diners by the cook."
   }
 ]

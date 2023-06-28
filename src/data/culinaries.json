@@ -30,6 +30,12 @@
     "desc": "Fish may include so-called shellfish such as molluscs, crustaceans, and echinoderms; more expansively, seafood covers both fish and other marine life used as food."
   },
   {
+    "name": "Duck",
+    "icon": "/culinary/duck.png",
+    "code": "duck",
+    "desc": "Duck is a lean meat filled with protein. It is also comparable in fat and calories to a skinless chicken."
+  },
+  {
     "name": "Crab",
     "icon": "/culinary/crab.png",
     "code": "crab",

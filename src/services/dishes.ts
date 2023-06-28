@@ -19,6 +19,13 @@ const populateDish = (dish) => ({
   culinary_list: dish.culinaries.map((code) => mappingCulinaries[code]),
 });
 
+export function fetchCounts(): { dish_count: number; culinary_count: number } {
+  return {
+    dish_count: DISHES.length,
+    culinary_count: CULINARIES.length,
+  };
+}
+
 export function fetchDishes({
   country_code,
   culinary_code,
